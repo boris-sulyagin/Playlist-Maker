@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="medium_padding">8dp</dimen>
+    <dimen name="primary_text_size">24sp</dimen>
+    <dimen name="title_text_size">22sp</dimen>
+    <dimen name="text_size">16sp</dimen>
+    <dimen name="indentation_from_the_edges_of_the_screen">16dp</dimen>
+    <dimen name="label_indentation_from_the_text">1dp</dimen>
+    <dimen name="settings_padding">21dp</dimen>
+    <dimen name="button_size">50dp</dimen>
+</resources>
