@@ -20,7 +20,7 @@
             app:icon="@drawable/arrow_back"
             android:backgroundTint="@color/white"
             style="?android:attr/borderlessButtonStyle"
-            app:iconTint="#1A1B22"/>
+            app:iconTint="@color/black"/>
 
 
         <TextView
