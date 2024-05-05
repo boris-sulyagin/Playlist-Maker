@@ -6,32 +6,14 @@
     android:background="@color/white"
     android:orientation="vertical">
 
-    <LinearLayout
+    <Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        >
+        android:layout_height="wrap_content"
+        android:navigationIcon="@drawable/arrow_back"
+        android:title="@string/title_settings">
 
-        <Button
-            android:id="@+id/arrow_back_button"
-            android:layout_width="@dimen/button_size"
-            android:layout_height="@dimen/button_size"
-            app:icon="@drawable/arrow_back"
-            android:backgroundTint="@color/white"
-            style="?android:attr/borderlessButtonStyle"
-            app:iconTint="@color/black"/>
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:text="@string/title_settings"
-            android:textColor="@color/black"
-            android:textSize="@dimen/title_text_size"/>
-
-    </LinearLayout>
+    </Toolbar>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,101 +21,51 @@
         android:orientation="vertical"
         android:padding="@dimen/indentation_from_the_edges_of_the_screen">
 
-        <FrameLayout
+        <Switch
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="@string/title_dark_theme"
+            android:layout_gravity="end"
             android:layout_marginTop="24dp"
+            android:textSize="@dimen/text_size"
             android:paddingTop="@dimen/settings_padding"
             android:paddingBottom="@dimen/settings_padding">
+        </Switch>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:text="@string/title_dark_theme"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_size"></TextView>
-
-            <Switch
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end">
-
-            </Switch>
-
-        </FrameLayout>
-
-        <FrameLayout
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/share"
+            android:gravity="center_vertical"
             android:paddingTop="@dimen/settings_padding"
-            android:paddingBottom="@dimen/settings_padding">
+            android:paddingBottom="@dimen/settings_padding"
+            android:text="@string/title_share_app"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size"></TextView>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:text="@string/title_share_app"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_size">
-            </TextView>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/share"
-                android:layout_gravity="end">
-            </ImageView>
-
-        </FrameLayout>
-
-        <FrameLayout
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/support"
             android:paddingTop="@dimen/settings_padding"
-            android:paddingBottom="@dimen/settings_padding">
+            android:paddingBottom="@dimen/settings_padding"
+            android:gravity="center_vertical"
+            android:text="@string/title_write_support"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size">
+        </TextView>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:text="@string/title_write_support"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_size">
-            </TextView>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/support"
-                android:layout_gravity="end">
-            </ImageView>
-
-        </FrameLayout>
-
-        <FrameLayout
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/arrow_forward"
             android:paddingTop="@dimen/settings_padding"
-            android:paddingBottom="@dimen/settings_padding">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:text="@string/title_user_agreement"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_size">
-            </TextView>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/arrow_forward"
-                android:layout_gravity="end">
-            </ImageView>
-
-        </FrameLayout>
+            android:paddingBottom="@dimen/settings_padding"
+            android:gravity="center_vertical"
+            android:text="@string/title_user_agreement"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size">
+        </TextView>
 
     </LinearLayout>
 

@@ -20,20 +20,14 @@
             android:textSize="@dimen/title_text_size" />
     </FrameLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="@dimen/indentation_from_the_edges_of_the_screen">
-
         <Button
             android:id="@+id/search"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginTop="8dp"
             android:layout_weight="1"
-            android:foreground="?attr/selectableItemBackground"
             android:backgroundTint="@color/white"
+            android:foreground="?attr/selectableItemBackground"
             android:text="@string/title_serch"
             android:textColor="@color/black"
             android:textSize="@dimen/title_text_size"
@@ -41,7 +35,9 @@
             app:icon="@drawable/ic_vector"
             app:iconGravity="textStart"
             app:iconPadding="@dimen/label_indentation_from_the_text"
-            app:iconTint="@color/black" />
+            app:iconTint="@color/black"
+            android:layout_marginLeft="@dimen/indentation_from_the_edges_of_the_screen"
+            android:layout_marginRight="@dimen/indentation_from_the_edges_of_the_screen"/>
 
         <Button
             android:id="@+id/media_library"
@@ -49,8 +45,8 @@
             android:layout_height="0dp"
             android:layout_marginTop="16dp"
             android:layout_weight="1"
-            android:foreground="?attr/selectableItemBackground"
             android:backgroundTint="@color/white"
+            android:foreground="?attr/selectableItemBackground"
             android:text="@string/title_media_library"
             android:textColor="@color/black"
             android:textSize="@dimen/title_text_size"
@@ -58,7 +54,9 @@
             app:icon="@drawable/media_library"
             app:iconGravity="textStart"
             app:iconPadding="@dimen/label_indentation_from_the_text"
-            app:iconTint="@color/black" />
+            app:iconTint="@color/black"
+            android:layout_marginLeft="@dimen/indentation_from_the_edges_of_the_screen"
+            android:layout_marginRight="@dimen/indentation_from_the_edges_of_the_screen"/>
 
         <Button
             android:id="@+id/settings"
@@ -67,8 +65,8 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="12dp"
             android:layout_weight="1"
-            android:foreground="?attr/selectableItemBackground"
             android:backgroundTint="@color/white"
+            android:foreground="?attr/selectableItemBackground"
             android:text="@string/title_settings"
             android:textColor="@color/black"
             android:textSize="@dimen/title_text_size"
@@ -76,10 +74,10 @@
             app:icon="@drawable/settings"
             app:iconGravity="textStart"
             app:iconPadding="@dimen/label_indentation_from_the_text"
-            app:iconTint="@color/black" />
+            app:iconTint="@color/black"
+            android:layout_marginLeft="@dimen/indentation_from_the_edges_of_the_screen"
+            android:layout_marginRight="@dimen/indentation_from_the_edges_of_the_screen"/>
 
-
-    </LinearLayout>
 
 
 </LinearLayout>
