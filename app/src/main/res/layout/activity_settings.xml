@@ -29,17 +29,20 @@
         </Switch>
 
         <TextView
+            android:id="@+id/shareApp"
             style="@style/SettingsTextStyle"
             android:drawableEnd="@drawable/share"
             android:text="@string/title_share_app"/>
 
         <TextView
+            android:id="@+id/support"
             style="@style/SettingsTextStyle"
             android:drawableEnd="@drawable/support"
             android:text="@string/title_write_support">
         </TextView>
 
         <TextView
+            android:id="@+id/userAgreement"
             style="@style/SettingsTextStyle"
             android:drawableEnd="@drawable/arrow_forward"
             android:text="@string/title_user_agreement">
