@@ -2,18 +2,74 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".SearchActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/searchToolbar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Заглушка"
-        android:textColor="@color/black"
-        >
+        app:title="@string/title_search"
+        app:navigationIcon="@drawable/arrow_back"
+        app:navigationIconTint="?attr/colorOnSecondary">
+    </com.google.android.material.appbar.MaterialToolbar>
 
-    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/background">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:tint="?attr/colorContainer"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/searchvector">
+
+        </ImageView>
+
+        <EditText
+            android:id="@+id/inputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@drawable/background"
+            android:layout_weight="1"
+            android:hint="@string/input_hint"
+            android:textSize="16sp"
+            android:maxLength="30"
+            android:maxLines="1"
+            android:inputType="text"
+            android:textColor="?attr/colorContainer"
+            android:textColorHint="?attr/colorContainer"
+            android:layout_margin="8dp">
+
+
+        </EditText>
+
+        <ImageView
+            android:id="@+id/search_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:tint="?attr/colorContainer"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/close"
+            android:visibility="gone">
+
+        </ImageView>
+
+
+    </LinearLayout>
+
 
 </LinearLayout>
