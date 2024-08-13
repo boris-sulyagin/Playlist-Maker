@@ -2,18 +2,44 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".SearchActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/searchToolbar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Заглушка"
-        android:textColor="@color/black"
-        >
+        app:title="@string/title_search"
+        app:navigationIcon="@drawable/arrow_back"
+        app:navigationIconTint="?attr/colorOnSecondary">
+    </com.google.android.material.appbar.MaterialToolbar>
 
-    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="@dimen/SearchLinearLayoutMarginRight"
+        android:layout_marginLeft="@dimen/SearchLinearLayoutMarginLeft"
+        android:layout_marginTop="@dimen/SearchLinearLayoutMarginTop"
+        android:background="@drawable/background">
+
+        <ImageView
+            style="@style/SearchSearchStyle">
+        </ImageView>
+
+        <EditText
+            android:id="@+id/inputEditText"
+            style="@style/SearchEditTextStyle">
+        </EditText>
+
+        <ImageView
+            android:id="@+id/search_close"
+            style="@style/SearchCloseStyle">
+        </ImageView>
+
+    </LinearLayout>
 
 </LinearLayout>
