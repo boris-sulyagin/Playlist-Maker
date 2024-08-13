@@ -8,16 +8,4 @@
     <dimen name="label_indentation_from_the_text">8dp</dimen>
     <dimen name="settings_padding">21dp</dimen>
     <dimen name="button_size">50dp</dimen>
-    <dimen name="maxLength">30</dimen>
-    <dimen name="maxLines">1</dimen>
-    <dimen name="EditTextHeigth">36dp</dimen>
-    <dimen name="SearchSearchMarginLeft">12dp</dimen>
-    <dimen name="SearchSearchMarginRight">8dp</dimen>
-    <dimen name="SearchCloseMarginLeft">12dp</dimen>
-    <dimen name="SearchCloseMarginRight">12dp</dimen>
-    <dimen name="SearchLinearLayoutMarginRight">16dp</dimen>
-    <dimen name="SearchLinearLayoutMarginLeft">16dp</dimen>
-    <dimen name="SearchLinearLayoutMarginTop">8dp</dimen>
-    <dimen name="SearchBackgroundRadius">8dp</dimen>
-
 </resources>
