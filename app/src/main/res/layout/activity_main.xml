@@ -5,12 +5,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/MainBackground">
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/indentation_from_the_edges_of_the_screen">
-
         <TextView
             style="@style/HeaderTextStyle"
             android:gravity="center_vertical"
@@ -22,15 +20,14 @@
         android:id="@+id/search"
         style="@style/MainButtonStyle"
         android:layout_marginTop="8dp"
-        android:text="@string/title_serch"
-        app:icon="@drawable/ic_vector"/>
+        android:text="@string/title_search"
+        app:icon="@drawable/ic_vector" />
 
     <Button
         android:id="@+id/media_library"
         style="@style/MainButtonStyle"
         android:text="@string/title_media_library"
         app:icon="@drawable/media_library"/>
-
 
     <Button
         android:id="@+id/settings"

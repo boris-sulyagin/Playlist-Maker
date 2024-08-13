@@ -2,7 +2,7 @@
     <string name="app_name">Playlist Maker</string>
     <string name="app_name2">Playlist maker</string>
     <string name="title_hello">Привет, Практикум</string>
-    <string name="title_serch">Поиск</string>
+    <string name="title_search">Поиск</string>
     <string name="title_media_library">Медиатека</string>
     <string name="title_settings">Настройки</string>
     <string name="title_dark_theme">Тёмная тема</string>
@@ -14,4 +14,5 @@
     <string name="message">Спасибо разработчикам и разработчицам за крутое приложение!</string>
     <string name="myMail">boris.sulyagin2018@yandex.ru</string>
     <string name="prakticum_link">https://practicum.yandex.ru/profile/android-developer/</string>
+    <string name="input_hint">Поиск</string>
 </resources>
