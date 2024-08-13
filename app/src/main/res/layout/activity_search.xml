@@ -16,60 +16,29 @@
         app:navigationIconTint="?attr/colorOnSecondary">
     </com.google.android.material.appbar.MaterialToolbar>
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginRight="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginRight="@dimen/SearchLinearLayoutMarginRight"
+        android:layout_marginLeft="@dimen/SearchLinearLayoutMarginLeft"
+        android:layout_marginTop="@dimen/SearchLinearLayoutMarginTop"
         android:background="@drawable/background">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            app:tint="?attr/colorContainer"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="8dp"
-            android:src="@drawable/searchvector">
-
+            style="@style/SearchSearchStyle">
         </ImageView>
 
         <EditText
             android:id="@+id/inputEditText"
-            android:layout_width="match_parent"
-            android:layout_height="36dp"
-            android:background="@drawable/background"
-            android:layout_weight="1"
-            android:hint="@string/input_hint"
-            android:textSize="16sp"
-            android:maxLength="30"
-            android:maxLines="1"
-            android:inputType="text"
-            android:textColor="?attr/colorContainer"
-            android:textColorHint="?attr/colorContainer"
-            android:layout_margin="8dp">
-
-
+            style="@style/SearchEditTextStyle">
         </EditText>
 
         <ImageView
             android:id="@+id/search_close"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            app:tint="?attr/colorContainer"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
-            android:src="@drawable/close"
-            android:visibility="gone">
-
+            style="@style/SearchCloseStyle">
         </ImageView>
 
-
     </LinearLayout>
-
 
 </LinearLayout>
