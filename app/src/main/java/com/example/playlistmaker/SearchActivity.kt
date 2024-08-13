@@ -10,10 +10,13 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 
 class SearchActivity : AppCompatActivity() {
+
+    private var string: String = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_search)
+
 
         val inputEditText = findViewById<EditText>(R.id.inputEditText)
         val clearButton = findViewById<ImageView>(R.id.search_close)
@@ -28,6 +31,7 @@ class SearchActivity : AppCompatActivity() {
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                string = s.toString()
                 clearButton.visibility = clearButtonVisibility(s)
             }
 
@@ -36,14 +40,28 @@ class SearchActivity : AppCompatActivity() {
             }
         }
         inputEditText.addTextChangedListener(simpleTextWatcher)
-    }
-
-}
-
-    private fun clearButtonVisibility(s: CharSequence?): Int {
-        return if (s.isNullOrEmpty()) {
-            View.GONE
-        } else {
-            View.VISIBLE
+        inputEditText.setText(string)
+        if (savedInstanceState != null) {
+            string = savedInstanceState.getString("string_value", string)
         }
     }
+    override fun onSaveInstanceState(outState: Bundle) {
+        // put string value
+        super.onSaveInstanceState(outState)
+        outState.putString("string_value", string)
+    }
+
+    /*
+    override fun onRestoreInstanceState(savedInstanceState: Bundle){
+        super.onRestoreInstanceState(savedInstanceState)
+        string = savedInstanceState.getString("string_value", string)
+    }
+     */
+}
+private fun clearButtonVisibility(s: CharSequence?): Int {
+    return if (s.isNullOrEmpty()) {
+        View.GONE
+    } else {
+        View.VISIBLE
+    }
+}
