@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="?attr/colorSecondary"
     tools:context=".SearchActivity">
 
     <com.google.android.material.appbar.MaterialToolbar
@@ -16,10 +17,10 @@
         app:navigationIconTint="?attr/colorOnSecondary">
     </com.google.android.material.appbar.MaterialToolbar>
 
-    <LinearLayout
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_height="@dimen/SearchHeight"
         android:layout_marginRight="@dimen/SearchLinearLayoutMarginRight"
         android:layout_marginLeft="@dimen/SearchLinearLayoutMarginLeft"
         android:layout_marginTop="@dimen/SearchLinearLayoutMarginTop"
@@ -39,6 +40,6 @@
             style="@style/SearchCloseStyle">
         </ImageView>
 
-    </LinearLayout>
+    </FrameLayout>
 
 </LinearLayout>

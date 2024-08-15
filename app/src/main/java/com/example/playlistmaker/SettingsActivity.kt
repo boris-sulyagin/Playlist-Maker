@@ -18,7 +18,6 @@ class SettingsActivity : AppCompatActivity() {
 
         val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
 
-
         toolbar.setOnClickListener{
             finish()
         }

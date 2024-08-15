@@ -11,8 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:navigationIcon="@drawable/arrow_back"
-        app:title="@string/title_settings"
-        app:navigationIconTint="?attr/colorOnSecondary">
+        app:navigationIconTint="?attr/colorOnSecondary"
+        app:title="@string/title_settings">
     </com.google.android.material.appbar.MaterialToolbar>
 
     <LinearLayout
@@ -23,16 +23,17 @@
 
         <Switch
             style="@style/SettingsTextStyle"
-            android:text="@string/title_dark_theme"
             android:layout_gravity="end"
-            android:layout_marginTop="24dp">
+            android:layout_marginTop="@dimen/medium_padding"
+            android:text="@string/title_dark_theme">
         </Switch>
 
         <TextView
             android:id="@+id/shareApp"
             style="@style/SettingsTextStyle"
             android:drawableEnd="@drawable/share"
-            android:text="@string/title_share_app"/>
+            android:text="@string/title_share_app">
+        </TextView>
 
         <TextView
             android:id="@+id/support"

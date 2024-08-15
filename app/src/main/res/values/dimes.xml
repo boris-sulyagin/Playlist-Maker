@@ -14,10 +14,17 @@
     <dimen name="SearchSearchMarginLeft">12dp</dimen>
     <dimen name="SearchSearchMarginRight">8dp</dimen>
     <dimen name="SearchCloseMarginLeft">12dp</dimen>
-    <dimen name="SearchCloseMarginRight">12dp</dimen>
+    <dimen name="SearchCloseMarginRight">10dp</dimen>
     <dimen name="SearchLinearLayoutMarginRight">16dp</dimen>
     <dimen name="SearchLinearLayoutMarginLeft">16dp</dimen>
     <dimen name="SearchLinearLayoutMarginTop">8dp</dimen>
     <dimen name="SearchBackgroundRadius">8dp</dimen>
+    <dimen name="SettingsSwitch">24</dimen>
+    <dimen name="ButtonFromTopPadding">24dp</dimen>
+    <dimen name="MarginFromBottom">12dp</dimen>
+    <dimen name="SearchHeight">36dp</dimen>
+    <dimen name="SearchEditTextStyleMarginLeft">36dp</dimen>
+    <dimen name="SearchEditTextStyleRight">40dp</dimen>
+
 
 </resources>
