@@ -12,7 +12,7 @@ import com.google.android.material.appbar.MaterialToolbar
 
 class SearchActivity : AppCompatActivity() {
 
-    var string: String = ""
+    private var string: String = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
