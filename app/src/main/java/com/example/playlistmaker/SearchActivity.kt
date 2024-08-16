@@ -7,25 +7,23 @@ import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.ImageView
-import android.widget.Toolbar
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.appbar.MaterialToolbar
 
 class SearchActivity : AppCompatActivity() {
 
-    private var string: String = ""
+    var string: String = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
 
+        val inputEditText = findViewById<EditText>(R.id.inputEditText)
         val searchToolbar = findViewById<MaterialToolbar>(R.id.searchToolbar)
 
         searchToolbar.setOnClickListener{
             finish()
         }
 
-        val inputEditText = findViewById<EditText>(R.id.inputEditText)
         val clearButton = findViewById<ImageView>(R.id.search_close)
 
         clearButton.setOnClickListener{
@@ -49,7 +47,6 @@ class SearchActivity : AppCompatActivity() {
             }
         }
         inputEditText.addTextChangedListener(simpleTextWatcher)
-        inputEditText.setText(string)
     }
     override fun onSaveInstanceState(outState: Bundle) {
         // put string value
@@ -59,6 +56,8 @@ class SearchActivity : AppCompatActivity() {
     override fun onRestoreInstanceState(savedInstanceState: Bundle){
         super.onRestoreInstanceState(savedInstanceState)
         string = savedInstanceState.getString("string_value", string)
+        val inputEditText = findViewById<EditText>(R.id.inputEditText)
+        inputEditText.setText(string)
     }
 }
 private fun clearButtonVisibility(s: CharSequence?): Int {
