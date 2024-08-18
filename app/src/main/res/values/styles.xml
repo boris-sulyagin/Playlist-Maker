@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="HeaderTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">?attr/colorPrimaryVariant</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">@font/ys_display_medium</item>
+        <item name="android:textFontWeight">500</item>
+    </style>
+
+    <style name="MainButtonStyle" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:backgroundTint">?attr/colorPrimaryVariant</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:textSize">@dimen/title_text_size</item>
+        <item name="iconPadding">@dimen/label_indentation_from_the_text</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconTint">?attr/colorOnPrimary</item>
+        <item name="android:layout_marginLeft">@dimen/indentation_from_the_edges_of_the_screen</item>
+        <item name="android:layout_marginRight">@dimen/indentation_from_the_edges_of_the_screen</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:fontFamily">@font/ys_display_medium</item>
+        <item name="android:textFontWeight">500</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetTop">0dp</item>
+    </style>
+
+    <style name="SettingsTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/settings_padding</item>
+        <item name="android:paddingBottom">@dimen/settings_padding</item>
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:fontFamily">@font/ys_display_regular</item>
+        <item name="android:textFontWeight">400</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="CustomToolbar" parent="ThemeOverlay.MaterialComponents.Toolbar.Primary">
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+
+    <style name="SearchEditTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/EditTextHeigth</item>
+        <item name="android:layout_marginLeft">@dimen/SearchEditTextStyleMarginLeft</item>
+        <item name="android:layout_marginRight">@dimen/SearchEditTextStyleRight</item>
+        <item name="android:fontFamily">@font/ys_display_regular</item>
+        <item name="android:background">@drawable/background</item>
+        <item name="android:hint">@string/input_hint</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:maxLength">30</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textColor">@color/YP_Black</item>
+        <item name="android:textColorHint">?attr/colorContainer</item>
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
+    </style>
+
+    <style name="SearchSearchStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/SearchHeight</item>
+        <item name="tint">?attr/colorContainer</item>
+        <item name="android:src">@drawable/searchvector</item>
+        <item name="android:layout_marginStart">@dimen/SearchCloseMarginLeft</item>
+    </style>
+
+    <style name="SearchCloseStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/SearchHeight</item>
+        <item name="android:src">@drawable/close</item>
+        <item name="tint">?attr/colorContainer</item>
+        <item name="android:layout_gravity">end</item>
+        <item name="android:layout_marginRight">@dimen/SearchCloseMarginRight</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+</resources>

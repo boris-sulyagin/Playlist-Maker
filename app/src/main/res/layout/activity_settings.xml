@@ -3,17 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="?attr/colorSecondary"
     android:orientation="vertical">
 
-    <Toolbar
+    <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:navigationIcon="@drawable/arrow_back"
-        android:title="@string/title_settings">
-
-    </Toolbar>
+        app:navigationIcon="@drawable/arrow_back"
+        app:navigationIconTint="?attr/colorOnSecondary"
+        app:title="@string/title_settings">
+    </com.google.android.material.appbar.MaterialToolbar>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,52 +22,31 @@
         android:padding="@dimen/indentation_from_the_edges_of_the_screen">
 
         <Switch
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/title_dark_theme"
+            style="@style/SettingsTextStyle"
             android:layout_gravity="end"
-            android:layout_marginTop="24dp"
-            android:textSize="@dimen/text_size"
-            android:paddingTop="@dimen/settings_padding"
-            android:paddingBottom="@dimen/settings_padding">
+            android:layout_marginTop="@dimen/medium_padding"
+            android:text="@string/title_dark_theme">
         </Switch>
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:id="@+id/shareApp"
+            style="@style/SettingsTextStyle"
             android:drawableEnd="@drawable/share"
-            android:gravity="center_vertical"
-            android:paddingTop="@dimen/settings_padding"
-            android:paddingBottom="@dimen/settings_padding"
-            android:text="@string/title_share_app"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_size"></TextView>
+            android:text="@string/title_share_app">
+        </TextView>
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:id="@+id/support"
+            style="@style/SettingsTextStyle"
             android:drawableEnd="@drawable/support"
-            android:paddingTop="@dimen/settings_padding"
-            android:paddingBottom="@dimen/settings_padding"
-            android:gravity="center_vertical"
-            android:text="@string/title_write_support"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_size">
+            android:text="@string/title_write_support">
         </TextView>
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:id="@+id/userAgreement"
+            style="@style/SettingsTextStyle"
             android:drawableEnd="@drawable/arrow_forward"
-            android:paddingTop="@dimen/settings_padding"
-            android:paddingBottom="@dimen/settings_padding"
-            android:gravity="center_vertical"
-            android:text="@string/title_user_agreement"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_size">
+            android:text="@string/title_user_agreement">
         </TextView>
-
     </LinearLayout>
-
 </LinearLayout>
-
