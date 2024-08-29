@@ -82,4 +82,54 @@
         <item name="android:visibility">gone</item>
     </style>
 
+    <style name="recycle_tracks">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">@dimen/Indent_24dp</item>
+    </style>
+
+    <style name="ImageCoverTrackView">
+        <item name="android:layout_width">@dimen/CoverSize</item>
+        <item name="android:layout_height">@dimen/CoverSize</item>
+        <item name="android:layout_marginTop">@dimen/Indent_8dp</item>
+        <item name="android:layout_marginLeft">@dimen/Indent_13dp</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <style name="TrackNameStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/Indent_66dp</item>
+        <item name="android:layout_marginTop">@dimen/Indent_14dp</item>
+        <item name="android:layout_marginRight">@dimen/Indent_44dp</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:fontFamily">@font/ys_display_regular</item>
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+        <item name="singleLine">true</item>
+    </style>
+
+    <style name="point_song">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:src">@drawable/point</item>
+    </style>
+
+    <style name="SongNameStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_11sp</item>
+        <item name="android:fontFamily">@font/ys_display_regular</item>
+        <item name="singleLine">true</item>
+    </style>
+
+    <style name="arrow_forward_song">
+        <item name="android:layout_width">@dimen/Indent_8dp</item>
+        <item name="android:layout_height">@dimen/Indent_14dp</item>
+        <item name="android:layout_gravity">end</item>
+        <item name="android:layout_marginEnd">@dimen/Indent_20dp</item>
+        <item name="android:layout_marginTop">@dimen/Indent_23dp</item>
+        <item name="android:src">@drawable/arrow_forward</item>
+    </style>
+
 </resources>

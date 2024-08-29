@@ -42,4 +42,7 @@
 
     </FrameLayout>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tracksList"
+        style="@style/recycle_tracks"/>
 </LinearLayout>

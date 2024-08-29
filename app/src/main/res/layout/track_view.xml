@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="?attr/colorSecondary">
+
+    <ImageView
+        android:id="@+id/item_image"
+        style="@style/ImageCoverTrackView"/>
+
+    <TextView
+        android:id="@+id/itemTrackName"
+        style="@style/TrackNameStyle"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/Indent_34dp"
+        android:layout_marginLeft="@dimen/Indent_66dp"
+        android:layout_marginBottom="@dimen/Indent_14dp">
+
+        <TextView
+            android:id="@+id/itemArtistName"
+            style="@style/SongNameStyle"/>
+
+        <ImageView
+            style="@style/point_song"/>
+
+        <TextView
+            android:id="@+id/itemTrackTime"
+            style="@style/SongNameStyle"/>
+    </LinearLayout>
+
+    <ImageView
+        style="@style/arrow_forward_song"/>
+</FrameLayout>
