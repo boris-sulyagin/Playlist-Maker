@@ -20,7 +20,7 @@ class TrackViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
 
         Glide.with(itemView)
             .load(model.artworkUrl100)
-            .placeholder(R.drawable.barsik)
+            .placeholder(R.drawable.placeholder)
             .centerCrop()
             .transform(RoundedCorners(10))
             .into(itemArtworkUrl100View)
