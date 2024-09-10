@@ -32,7 +32,9 @@
 
         <EditText
             android:id="@+id/inputEditText"
-            style="@style/SearchEditTextStyle">
+            style="@style/SearchEditTextStyle"
+            android:imeOptions="actionDone"
+            android:singleLine="true">
         </EditText>
 
         <ImageView
@@ -41,8 +43,64 @@
         </ImageView>
 
     </FrameLayout>
+    
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/tracksList"
-        style="@style/recycle_tracks"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tracksList"
+            style="@style/recycle_tracks"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+
+        <TextView
+            style="@style/foundNothingPlaceholderStyle"
+            android:id="@+id/foundNothingPlaceholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:drawableTopCompat="@drawable/foundnothing"/>
+
+        <LinearLayout
+            android:id="@+id/communicationProblemsPlaceholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/Indent_24dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@string/communicationProblems"
+                android:src="@drawable/looseconnection"
+                />
+
+            <TextView
+                style="@style/communicationProblemsPlaceholderStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/communicationProblems"
+                android:layout_marginTop="@dimen/Indent_16dp"/>
+
+            <TextView
+                style="@style/communicationProblemsPlaceholderStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/downloadFailed"
+                android:layout_marginTop="@dimen/Indent_24dp"/>
+            
+            <Button
+                style="@style/updateButtonStyle"
+                android:id="@+id/buttonUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cornerRadius="@dimen/Indent_54dp"/>
+
+        </LinearLayout>
+        
+    </FrameLayout>    
+
 </LinearLayout>

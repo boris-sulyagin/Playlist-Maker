@@ -132,4 +132,33 @@
         <item name="android:src">@drawable/arrow_forward</item>
     </style>
 
+    <style name="foundNothingPlaceholderStyle">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:drawablePadding">@dimen/Indent_20dp</item>
+        <item name="android:text">@string/nothingFound</item>
+        <item name="android:fontFamily">font/ys_display_regular</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+        <item name="android:textSize">@dimen/text_size_19</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="communicationProblemsPlaceholderStyle">
+        <item name="android:textSize">@dimen/text_size_19</item>
+        <item name="android:fontFamily">font/ys_display_regular</item>
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="updateButtonStyle">
+        <item name="android:layout_marginTop">@dimen/Indent_24dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:text">@string/update</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:backgroundTint">?attr/android:button</item>
+        <item name="android:textColor">?attr/android:text</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
 </resources>
