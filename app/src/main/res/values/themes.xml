@@ -13,6 +13,8 @@
         <item name="colorContainer">@color/text_search_gray_color</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="android:button">@color/YP_Black</item>
+        <item name="android:text">@color/white</item>
         <!-- Customize your theme here. -->
     </style>
 </resources>
