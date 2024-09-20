@@ -1,7 +1,5 @@
 package com.example.playlistmaker
 
-
-
 import android.content.Context
 import android.os.Bundle
 import android.text.Editable

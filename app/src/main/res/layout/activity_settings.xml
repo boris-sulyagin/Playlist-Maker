@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="?attr/colorSecondary"
     android:orientation="vertical">
 
@@ -28,7 +29,10 @@
             android:layout_gravity="start"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/title_dark_theme"/>
+            app:thumbTint="@color/settings_switch_thumbTint"
+            app:trackTint="@color/settings_switch_trackTint"
+            android:text="@string/title_dark_theme"
+            tools:ignore="UseSwitchCompatOrMaterialXml"/>
 
         <TextView
             android:id="@+id/shareApp"
