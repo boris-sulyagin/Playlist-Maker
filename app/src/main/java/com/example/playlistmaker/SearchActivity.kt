@@ -42,7 +42,7 @@ class SearchActivity : AppCompatActivity() {
     lateinit var inputEditText: EditText
     private lateinit var searchToolbar: MaterialToolbar
     lateinit var clearButton: ImageView
-    private lateinit var recycler: RecyclerView
+    private lateinit var recyclerTracksList: RecyclerView
     private lateinit var buttonUpdate: Button
     private lateinit var foundNothingPlaceholder: TextView
     private lateinit var communicationProblemsPlaceholder: LinearLayout
@@ -55,26 +55,10 @@ class SearchActivity : AppCompatActivity() {
 
     private var searchInput: String = ""
 
-    /*
-    private val okHttpClient = OkHttpClient.Builder()
-        .callTimeout(Constants.CALL_TIMEOUT.toLong(), TimeUnit.SECONDS)
-        .readTimeout(Constants.READ_TIMEOUT.toLong(), TimeUnit.SECONDS)
-        .addInterceptor(HttpLoggingInterceptor().apply {
-            if (BuildConfig.DEBUG) {
-                level = HttpLoggingInterceptor.Level.BASIC
-            }
-        })
-        .build()
-
-     */
-
-
-
 
     private val retrofit = Retrofit.Builder()
         .baseUrl(ItunesApiConst.BASE_URL)
         .addConverterFactory(GsonConverterFactory.create())
-        //.client(okHttpClient)
         .build()
 
     private val serviceSearch = retrofit.create(ItunesSongSearch::class.java)
@@ -160,8 +144,9 @@ class SearchActivity : AppCompatActivity() {
     }
 
     private fun initSearchResults() {
-        recycler = findViewById(R.id.tracksList)
-        recycler.adapter = searchAdapter
+        recyclerTracksList = findViewById(R.id.recyclerTracksList)
+        recyclerTracksList.adapter = searchAdapter
+        recyclerTracksList.layoutManager = LinearLayoutManager(this)
     }
 
     private fun clearSearch() {
@@ -260,25 +245,25 @@ class SearchActivity : AppCompatActivity() {
 
         when(content) {
             Content.NOT_FOUND -> {
-                recycler.visibility = View.GONE
+                recyclerTracksList.visibility = View.GONE
                 historyList.visibility = View.GONE
                 foundNothingPlaceholder.visibility = View.VISIBLE
                 communicationProblemsPlaceholder.visibility = View.GONE
             }
             Content.ERROR -> {
-                recycler.visibility = View.GONE
+                recyclerTracksList.visibility = View.GONE
                 historyList.visibility = View.GONE
                 foundNothingPlaceholder.visibility = View.GONE
                 communicationProblemsPlaceholder.visibility = View.VISIBLE
             }
             Content.SEARCH_RESULT -> {
-                recycler.visibility = View.VISIBLE
+                recyclerTracksList.visibility = View.VISIBLE
                 historyList.visibility = View.GONE
                 foundNothingPlaceholder.visibility = View.GONE
                 communicationProblemsPlaceholder.visibility = View.GONE
             }
             Content.TRACKS_HISTORY -> {
-                recycler.visibility = View.GONE
+                recyclerTracksList.visibility = View.GONE
                 historyList.visibility = View.VISIBLE
                 foundNothingPlaceholder.visibility = View.GONE
                 communicationProblemsPlaceholder.visibility = View.GONE

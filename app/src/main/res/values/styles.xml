@@ -161,4 +161,21 @@
         <item name="android:textAllCaps">false</item>
     </style>
 
+    <style name="clearHistoryButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="fontFamily">@font/ys_display_medium</item>
+        <item name="fontWeight">500</item>
+        <item name="android:textSize">@dimen/text_size_14sp</item>
+        <item name="android:textColor">?attr/android:text</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:backgroundTint">?attr/android:button</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="cornerRadius">54dp</item>
+    </style>
+
 </resources>

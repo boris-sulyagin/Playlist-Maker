@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.playlistmaker.R
-import com.example.playlistmaker.Track
+import com.example.playlistmaker.model.Track
 import com.example.playlistmaker.TracksDiffCallback
 import com.example.playlistmaker.viewHolders.TrackViewHolder
 

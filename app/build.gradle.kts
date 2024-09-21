@@ -39,16 +39,20 @@ android {
 
 dependencies {
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.androidx.activity)
+    implementation(libs.androidx.core.ktx.v190)
+    implementation(libs.androidx.appcompat.v170)
+    implementation(libs.material.v180)
     implementation(libs.androidx.constraintlayout)
     testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    implementation(libs.glide)
-    annotationProcessor(libs.compiler)
+    androidTestImplementation(libs.androidx.junit.v121)
+    androidTestImplementation(libs.androidx.espresso.core.v361)
+
+    //Glide
+    implementation(libs.material.v1120)
+    implementation(libs.glide.v4151)
+    annotationProcessor(libs.compiler.v4151)
+
+    //Retrofit
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
     implementation(libs.logging.interceptor)
