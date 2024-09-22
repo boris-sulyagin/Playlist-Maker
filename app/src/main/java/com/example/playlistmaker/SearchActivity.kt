@@ -182,7 +182,13 @@ class SearchActivity : AppCompatActivity() {
                 clearButton.visibility = buttonSearchClearVisibility(s)
                 searchInput = inputEditText.text.toString()
 
-                if (inputEditText.hasFocus() && s?.isEmpty() == true ) {
+                historyAdapter.tracks = searchHistory.get()
+
+                if (inputEditText.hasFocus() && s?.isEmpty() == true && historyAdapter.tracks.isNotEmpty()) {
+                    showContent(Content.TRACKS_HISTORY)
+                }
+
+                if (inputEditText.hasFocus() && s?.isEmpty() == true && historyAdapter.tracks.isEmpty()) {
                     showContent(Content.CLEAR)
                 }
 
