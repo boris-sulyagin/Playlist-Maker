@@ -140,7 +140,7 @@ class SearchActivity : AppCompatActivity() {
 
     private fun clearTracksHistory() {
         searchHistory.clear()
-        showContent(Content.SEARCH_RESULT)
+        showContent(Content.CLEAR)
     }
 
     private fun initSearchResults() {
