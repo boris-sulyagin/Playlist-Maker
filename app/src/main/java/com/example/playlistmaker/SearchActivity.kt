@@ -155,7 +155,7 @@ class SearchActivity : AppCompatActivity() {
         if (historyAdapter.tracks.isNotEmpty()) {
             showContent(Content.TRACKS_HISTORY)
         } else {
-            showContent(Content.SEARCH_RESULT)
+            showContent(Content.CLEAR)
         }
         val view = this.currentFocus
         if (view != null) {
@@ -182,9 +182,14 @@ class SearchActivity : AppCompatActivity() {
                 clearButton.visibility = buttonSearchClearVisibility(s)
                 searchInput = inputEditText.text.toString()
 
+                if (inputEditText.hasFocus() && s?.isEmpty() == true ) {
+                    showContent(Content.CLEAR)
+                }
+
                 if (inputEditText.hasFocus() && searchInput.isNotEmpty()) {
                     showContent(Content.SEARCH_RESULT)
                 }
+
             }
 
             override fun afterTextChanged(s: Editable?) {
@@ -192,11 +197,6 @@ class SearchActivity : AppCompatActivity() {
         }
         inputEditText.addTextChangedListener(simpleTextWatcher)
 
-        inputEditText.setOnFocusChangeListener { _, hasFocus ->
-            if (hasFocus && inputEditText.text.isEmpty()) {
-                showContent(Content.SEARCH_RESULT)
-            }
-        }
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
@@ -265,6 +265,12 @@ class SearchActivity : AppCompatActivity() {
             Content.TRACKS_HISTORY -> {
                 recyclerTracksList.visibility = View.GONE
                 historyList.visibility = View.VISIBLE
+                foundNothingPlaceholder.visibility = View.GONE
+                communicationProblemsPlaceholder.visibility = View.GONE
+            }
+            Content.CLEAR -> {
+                recyclerTracksList.visibility = View.GONE
+                historyList.visibility = View.GONE
                 foundNothingPlaceholder.visibility = View.GONE
                 communicationProblemsPlaceholder.visibility = View.GONE
             }
