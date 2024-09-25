@@ -118,7 +118,7 @@
                 android:layout_marginBottom="@dimen/Indent_20dp"
                 android:fontFamily="@font/ys_display_medium"
                 android:textFontWeight="500"
-                android:textColor="@color/YP_Black"
+                android:textColor="?attr/colorOnSecondary"
                 android:gravity="center"
                 android:text="@string/search_history"
                 android:textSize="@dimen/text_size_19" />

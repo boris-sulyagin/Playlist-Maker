@@ -43,6 +43,7 @@ dependencies {
     implementation(libs.androidx.appcompat.v170)
     implementation(libs.material.v180)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.activity)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit.v121)
     androidTestImplementation(libs.androidx.espresso.core.v361)
