@@ -49,10 +49,12 @@
         android:layout_height="match_parent">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/tracksList"
+            android:id="@+id/recyclerTracksList"
             style="@style/recycle_tracks"
+            android:visibility="gone"
             android:layout_height="wrap_content"
-            android:layout_width="match_parent"/>
+            android:layout_width="match_parent"
+            tools:listitem="@layout/track_view"/>
 
         <TextView
             style="@style/foundNothingPlaceholderStyle"
@@ -99,6 +101,45 @@
                 android:layout_height="wrap_content"
                 app:cornerRadius="@dimen/Indent_54dp"/>
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/history_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/Indent_24dp"
+                android:layout_marginTop="@dimen/Indent_32dp"
+                android:layout_marginBottom="@dimen/Indent_20dp"
+                android:fontFamily="@font/ys_display_medium"
+                android:textFontWeight="500"
+                android:textColor="@color/YP_Black"
+                android:gravity="center"
+                android:text="@string/search_history"
+                android:textSize="@dimen/text_size_19" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewHistory"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/track_view"/>
+
+            <Button
+                android:id="@+id/button_clear_history"
+                style="@style/clearHistoryButton"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/Indent_24dp"
+                android:inputType="textCapSentences"
+                android:text="@string/clear_history"/>
         </LinearLayout>
         
     </FrameLayout>    
