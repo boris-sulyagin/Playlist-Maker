@@ -5,6 +5,7 @@
     <dimen name="title_text_size">22sp</dimen>
     <dimen name="text_size">16sp</dimen>
     <dimen name="text_size_11sp">11sp</dimen>
+    <dimen name="text_size_12sp">12sp</dimen>
     <dimen name="text_size_13sp">13sp</dimen>
     <dimen name="text_size_14sp">14sp</dimen>
     <dimen name="text_size_19">19sp</dimen>
@@ -31,6 +32,7 @@
     <dimen name="SearchEditTextStyleMarginLeft">36dp</dimen>
     <dimen name="SearchEditTextStyleRight">40dp</dimen>
     <dimen name="CoverSize">45dp</dimen>
+    <dimen name="Indent_0dp">0dp</dimen>
     <dimen name="Indent_4dp">4dp</dimen>
     <dimen name="Indent_8dp">8dp</dimen>
     <dimen name="Indent_12dp">12dp</dimen>
@@ -42,8 +44,11 @@
     <dimen name="Indent_23dp">23dp</dimen>
     <dimen name="Indent_24dp">24dp</dimen>
     <dimen name="Indent_28dp">28dp</dimen>
+    <dimen name="Indent_30dp">30dp</dimen>
     <dimen name="Indent_32dp">32dp</dimen>
     <dimen name="Indent_34dp">34dp</dimen>
+    <dimen name="Indent_38dp">38dp</dimen>
+    <dimen name="Indent_42dp">42dp</dimen>
     <dimen name="Indent_44dp">44dp</dimen>
     <dimen name="Indent_52dp">52dp</dimen>
     <dimen name="Indent_54dp">54dp</dimen>

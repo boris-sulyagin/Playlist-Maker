@@ -32,4 +32,9 @@
     <string name="add_to_favorites">Добавить в избранное</string>
     <string name="playing_time">00:30</string>
     <string name="album_icon">Обложка альбома</string>
+    <string name="None">None</string>
+    <string name="No_name_artist">No name artist</string>
+    <string name="Janre">Жанр</string>
+    <string name="Long">Жанр</string>
+
 </resources>

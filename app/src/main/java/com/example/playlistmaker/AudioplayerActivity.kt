@@ -5,10 +5,7 @@ import android.provider.MediaStore.Audio.AudioColumns.TRACK
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.example.playlistmaker.model.Track
@@ -17,7 +14,7 @@ import java.text.SimpleDateFormat
 import java.util.Locale
 
 class AudioplayerActivity : AppCompatActivity() {
-    private lateinit var toolbar: androidx.appcompat.widget.Toolbar
+
     private lateinit var trackName: TextView
     private lateinit var trackTime: TextView
     private lateinit var artistName: TextView
@@ -37,24 +34,26 @@ class AudioplayerActivity : AppCompatActivity() {
         initTrackInfo()
     }
 
+
     private fun initToolbar() {
-        toolbar = findViewById(R.id.player_toolbar)
-        toolbar.setNavigationOnClickListener {
+        var toolbar = findViewById<ImageView>(R.id.backButton)
+        toolbar.setOnClickListener {
             finish()
         }
     }
 
+
     private fun initTrackInfo() {
         val track = Gson().fromJson(intent.getStringExtra(TRACK), Track::class.java)
 
-        trackName = findViewById(R.id.trackName)
-        artistName = findViewById(R.id.artistName)
-        trackTime = findViewById(R.id.trackTime)
-        albumIcon = findViewById(R.id.track_icon)
-        collectionName = findViewById(R.id.album_name)
-        releaseDate = findViewById(R.id.release_date_data)
-        primaryGenreName = findViewById(R.id.primary_genre_name)
-        country = findViewById(R.id.country_data)
+      trackName = findViewById(R.id.title)
+      artistName = findViewById(R.id.artist)
+      trackTime = findViewById(R.id.trackTime)
+      albumIcon = findViewById(R.id.cover)
+      collectionName = findViewById(R.id.albumName)
+      releaseDate = findViewById(R.id.year)
+      primaryGenreName = findViewById(R.id.styleName)
+      country = findViewById(R.id.countryName)
 
         Glide
             .with(albumIcon)
