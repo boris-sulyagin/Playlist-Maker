@@ -12,4 +12,6 @@ object Constants {
 
     const val HISTORY_LIST_SIZE = 10
 
+    const val TRACK = "track"
+
 }

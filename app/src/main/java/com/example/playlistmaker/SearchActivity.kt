@@ -3,6 +3,7 @@ package com.example.playlistmaker
 import android.annotation.SuppressLint
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.text.Editable
@@ -22,8 +23,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.playlistmaker.adapters.TrackAdapter
 import com.example.playlistmaker.model.ItunesApiConst
 import com.example.playlistmaker.model.ItunesSongSearch
+import com.example.playlistmaker.model.Track
 import com.example.playlistmaker.model.TrackReturn
 import com.google.android.material.appbar.MaterialToolbar
+import com.google.gson.Gson
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Call
@@ -64,11 +67,11 @@ class SearchActivity : AppCompatActivity() {
     private val serviceSearch = retrofit.create(ItunesSongSearch::class.java)
 
     private val searchAdapter = TrackAdapter {
-        searchHistory.add(it)
+        clickOnTrack(it)
     }
 
     private val historyAdapter = TrackAdapter {
-        searchHistory.add(it)
+        clickOnTrack(it)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -114,6 +117,14 @@ class SearchActivity : AppCompatActivity() {
         clearButton.setOnClickListener {
             clearSearch()
         }
+    }
+
+    private fun clickOnTrack(track: Track) {
+        searchHistory.add(track)
+        val intent = Intent(this, AudioplayerActivity::class.java).apply {
+            putExtra(Constants.TRACK, Gson().toJson(track))
+        }
+        startActivity(intent)
     }
 
 
@@ -194,6 +205,7 @@ class SearchActivity : AppCompatActivity() {
 
                 if (inputEditText.hasFocus() && searchInput.isNotEmpty()) {
                     showContent(Content.SEARCH_RESULT)
+                    initHistory()
                 }
 
             }
